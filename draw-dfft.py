@@ -13,6 +13,7 @@ import soundfile as sf
 SCREEN_TITLE = "Draw DFFT"
 PALETTE = [(int(255 * rgb[0]),int(255 * rgb[1]),int(255 * rgb[2])) for rgb in
            sns.color_palette("Spectral", 100)]
+MAG_THRESH = 0.1
 FREQ_LIM   = 100
 AMPL_SCALE = 200
 TIME_SCALE = 1./80
@@ -23,9 +24,11 @@ class freq():
         self.ampl = ampl
 
     def draw(self, dt, center):
+        # Calculate rotation vector
         p = np.exp(2*np.pi*1j*dt*self.f)
         p = np.array([p.real, p.imag])
 
+        # Scale radius
         radius = AMPL_SCALE * self.ampl
         p = center + p * radius
 
@@ -45,9 +48,15 @@ class draw_fft(ar.Window):
         super().__init__(sz[0], sz[1], SCREEN_TITLE)
         ar.set_background_color(ar.csscolor.CORNFLOWER_BLUE)
 
+        # Get magnitude, limit and normalize
         fft_mag = np.abs(fft_data)
         fft_mag = fft_mag / np.linalg.norm(fft_mag)
         fft_freq = fft_freq[:FREQ_LIM]
+
+        # Select magnitude higher than threshold
+        ind = np.argwhere(fft_mag > MAG_THRESH)
+        self.mag_thresh = fft_mag[ind].flatten()
+        self.freq_thresh = fft_freq[ind].flatten()
 
         self.ts = datetime.datetime.now().timestamp()
         self.points = np.empty((0,2))
@@ -61,31 +70,42 @@ class draw_fft(ar.Window):
     def on_draw(self):
         """ Render the screen. """
         ar.start_render()
+        w, h = self.get_size()
+
+        # Draw found frequencies
+        text_y = h/2
+        for f in self.freq_thresh:
+            text = "%3.0fHz" % f
+            ar.draw_text(text, w/2, text_y, ar.color.WHITE,
+                         10, width=300)
+            text_y -= 20
 
         ts = datetime.datetime.now().timestamp()
         dt = (ts - self.ts) * TIME_SCALE
         revol_n = np.floor(dt)
-
-        w, h = self.get_size()
         start_p = p = np.array([w/2 - 400, h/2])
 
+        # Draw each frequency circle
         for freq in self.freqs:
             p = freq.draw(dt, p)
 
+        # Limit points
         if revol_n >= 1:
             self.points = self.points[1:]
 
+        # Draw "pen" line
         end = np.array([start_p[0] + 300, p[1]])
         ar.draw_line(p[0], p[1], end[0], end[1], ar.color.BLACK, 1)
         p = end
 
+        # Pick up a point
         self.points = np.append(self.points, [p], axis=0)
 
         # Shift all points to the right
         self.points += (0.4, 0)
 
+        # Draw the whole points list
         ar.draw_points(self.points.tolist(), ar.color.GREEN, 5)
-
 
 
 def main(args):
@@ -93,6 +113,7 @@ def main(args):
         print("Usage: <file>...")
         sys.exit(1)
 
+    # FFT calculation
     data, rate = sf.read(args[1])
     fft_freq = np.fft.rfftfreq(len(data), d=1./rate)
     fft_data = np.fft.rfft(data)
