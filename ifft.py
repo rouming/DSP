@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #
 # https://stackoverflow.com/questions/53269177/i-only-get-noise-in-the-audio-after-taking-a-fft-and-varying-frequency-component
 #
