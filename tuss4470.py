@@ -158,7 +158,7 @@ TUSS_ZC_CONFIG_RESET                 = 0x14
 # Specified BURST_PULSE register settings
 TUSS_BURST_PULSE_HALF_BRG_MODE       = 0x80
 TUSS_BURST_PULSE_PRE_DRIVER_MODE     = 0x40
-TUSS_BURST_PULSE_BURST_PULSE_16      = 0x0F
+TUSS_BURST_PULSE_BURST_PULSE_16      = 0x10
 TUSS_BURST_PULSE_BURST_PULSE_MASK    = 0x3F
 TUSS_BURST_PULSE_RESET               = 0x00
 
@@ -180,7 +180,7 @@ TUSS_SPI_READ_BIT                    = 0x80
 
 
 def ft_set_clock(d, hz):
-    div = int((12000000 / (hz * 2)) - 1)  # Set SPI clock
+    div = int((12000000 / (hz * 2)) - 1)
     ft_write(d, (TCK_DIVISOR, div%256, div//256))
 
 def ft_read(d, nbytes):
@@ -191,10 +191,6 @@ def ft_write(d, data):
     s = bytes(data)
     r = d.write(s)
     return r
-
-def ft_write_cmd_bytes(d, cmd, data):
-    n = len(data) - 1
-    return ft_write(d, [cmd, n%256, n//256] + list(data))
 
 def ft_make_hdr(cmd, n):
     n = n - 1
@@ -286,17 +282,16 @@ def tuss_burst():
     ft_set_clock(d, TUSS_BURST_FREQ)
 
     ret = ft_write(d,
-             # IO1 low
-             (SET_BITS_LOW, CS_PIN, OUT_PINS) +
+             # SK high (see recommendation about the IO2 from TI), IO1 low
+             (SET_BITS_LOW, SK_PIN|CS_PIN, OUT_PINS) +
              # Number of burst pulses in bytes
              ft_make_hdr(CLK_BYTES, TUSS_BURST_PULSE_BURST_PULSE_16//8) +
-             # CS|IO1 high, other low
-             (SET_BITS_LOW, CS_PIN|IO1_PIN, OUT_PINS))
+             # SK|CS|IO1 high, other low
+             (SET_BITS_LOW, SK_PIN|CS_PIN|IO1_PIN, OUT_PINS))
     if ret != 9:
         return -1
 
     return 0
-
 
 d = ftdi.Device()
 d.ftdi_fn.ftdi_set_bitmode(0, 0); # reset
