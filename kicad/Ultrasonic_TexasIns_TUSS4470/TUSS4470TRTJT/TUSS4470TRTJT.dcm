@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TUSS4470TRTJT
+D Sensor Interface Direct drive ultrasonic sensor IC with logarithmic amplifier 20-QFN -25 to 105
+K
+F https://www.ti.com/lit/gpn/TUSS4470
+$ENDCMP
+#
+#End Doc Library

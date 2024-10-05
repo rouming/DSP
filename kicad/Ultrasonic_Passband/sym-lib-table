@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "SPU0410LR5H-QB")(type "KiCad")(uri "${KIPRJMOD}/SPU0410LR5H_QB/SPU0410LR5H-QB.kicad_sym")(options "")(descr ""))
+)

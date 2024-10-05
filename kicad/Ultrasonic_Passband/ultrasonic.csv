@@ -1,0 +1,71 @@
+"Source:","/home/roman/devel/DSP/kicad/Ultrasonic_Passband/ultrasonic.kicad_sch"
+"Date:","Sat 20 Jan 2024 14:54:22"
+"Tool:","Eeschema 7.0.9-7.0.9~ubuntu22.04.1"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","48"
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","DNP","MANUFACTURER","PARTREV","STANDARD"
+
+
+
+"1","2","C1, C2","1nF","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+"2","1","C3","4.7uF 10v","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+"3","1","C4","1uF","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+"4","2","C5, C7","0.1uF","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+"5","1","C6","4.7uF","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+"6","1","Cin4","56pF 1%","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","",""
+
+
+
+"7","1","D1","MSS1P3","Device:D_Schottky","Diode_SMD:D_MicroSMP_AK","~","","","",""
+"8","1","J1","Sig_In","Connector:Conn_Coaxial","Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical"," ~","","","",""
+"9","1","J2","Sig_Out","Connector:Conn_Coaxial","Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical"," ~","","","",""
+"10","1","J3","Transducer","Connector_Generic:Conn_01x02","Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical","~","","","",""
+"11","1","J4","+5v to +3.3v","Connector_Generic:Conn_01x03","Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical","~","","","",""
+"12","1","J5","+5v","Connector_Generic:Conn_01x02","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","~","","","",""
+"13","1","JP1","PreAmp > Sig","Jumper:SolderJumper_2_Open","Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm","~","","","",""
+"14","1","JP2","Mic > PreAmp","Jumper:SolderJumper_2_Open","Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm","~","","","",""
+"15","1","JP3","Mic > Sig","Jumper:SolderJumper_2_Open","Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm","~","","","",""
+"16","1","JP4","Trans > PreAmp","Jumper:SolderJumper_2_Open","Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm","~","","","",""
+"17","1","JP5","Trans > Sig","Jumper:SolderJumper_2_Open","Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm","~","","","",""
+
+
+"18","3","R1, R2, R3","10k","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+
+"19","1","R2_1","71.5k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"20","1","R2_2","51.1k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"21","1","R2_3","82.5k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+"22","1","R2_4","59k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+
+"23","1","Rin1","267k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+"24","1","Rin2","118k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+"25","2","Rin3","115k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+
+"26","1","RQ1","113k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"27","1","RQ2","232k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"28","1","RQ3","294k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"25","2","RQ4","102k 1%","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","",""
+
+"29","1","RV1","200k","Device:R_Potentiometer","Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical","~","","","",""
+
+
+"30","5","TP1, TP8, TP9, TP10, TP11","GND","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"31","1","TP2","PreAmp_Out","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"32","1","TP3","PreAmp_In","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"33","1","TP4","Mic_Out","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"34","1","TP5","Sig_In","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"35","1","TP6","Sig_Out","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"36","1","TP7","Trans","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","",""
+"37","1","U1","LTC1562xxG","Filter:LTC1562xxG","Package_SO:SSOP-20_5.3x7.2mm_P0.65mm","https://www.analog.com/media/en/technical-documentation/data-sheets/1562fa.pdf","","","",""
+"38","1","U2","SPU0410LR5H-QB","SPU0410LR5H-QB:SPU0410LR5H-QB","SPU0410LR5H_QB:XDCR_SPU0410LR5H-QB_aisler","","","KNOWLES","H","Manufacturer Recommendations"
+"39","1","U5","AD8552ARZ","Device:Opamp_Dual","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","~","","","",""

@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/roman/devel/DSP/kicad/Ultrasonic_TexasIns_TUSS4470/Ultrasonic_TexasIns_TUSS4470.kicad_sch</source>
+    <date>Sat 27 Jan 2024 18:46:07</date>
+    <tool>Eeschema 7.0.9-7.0.9~ubuntu22.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Ultrasonic_TexasIns_TUSS4470.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Cflt1">
+      <value>15nF, 5V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c0808ce-a255-4b50-a198-e7b8d9aefc12</tstamps>
+    </comp>
+    <comp ref="Cinn1">
+      <value>100nF, &gt;5V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>93c320fc-0f65-40ef-8d41-ca3849e633e0</tstamps>
+    </comp>
+    <comp ref="Cinp1">
+      <value>330pF, 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c8b15227-49d0-4746-a13a-74e417a91960</tstamps>
+    </comp>
+    <comp ref="Cpwr1">
+      <value>100nF, 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46ca5a08-e872-4fc8-8866-ecf56ed48080</tstamps>
+    </comp>
+    <comp ref="Cpwr2">
+      <value>2.2uF, 50V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a324f566-b570-4e0a-8190-4c2ae31ca188</tstamps>
+    </comp>
+    <comp ref="Cvdd1">
+      <value>100nF, &gt;5V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3dd0dc00-55b6-4c12-9fff-acad0f475d3c</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>MSS1P3</value>
+      <footprint>Diode_SMD:D_MicroSMP_AK</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Schottky diode"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a7aff34b-d2c4-4625-a13b-08d33bf0511f</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>647633f1-c320-4139-b77c-569a85207f04</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6bccebd3-fc51-4368-a21d-95a3592b4c30</tstamps>
+    </comp>
+    <comp ref="IC1">
+      <value>TUSS4470TRTJT</value>
+      <footprint>QFN50P400X400X80-21N-D</footprint>
+      <datasheet>https://www.ti.com/lit/gpn/TUSS4470</datasheet>
+      <fields>
+        <field name="Height">0.8</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">TUSS4470TRTJT</field>
+        <field name="Mouser Part Number">595-TUSS4470TRTJT</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSS4470TRTJT?qs=xZ%2FP%252Ba9zWqbLTbKNHEKnrQ%3D%3D</field>
+      </fields>
+      <libsource lib="TUSS4470TRTJT" part="TUSS4470TRTJT" description="Sensor Interface Direct drive ultrasonic sensor IC with logarithmic amplifier 20-QFN -25 to 105"/>
+      <property name="Height" value="0.8"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="TUSS4470TRTJT"/>
+      <property name="Mouser Part Number" value="595-TUSS4470TRTJT"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSS4470TRTJT?qs=xZ%2FP%252Ba9zWqbLTbKNHEKnrQ%3D%3D"/>
+      <property name="Arrow Part Number" value=""/>
+      <property name="Arrow Price/Stock" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Sensor Interface Direct drive ultrasonic sensor IC with logarithmic amplifier 20-QFN -25 to 105"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fce00f3c-50c9-400d-917b-c279b65e83e6</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>~</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x11" description="Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e01e5aaf-6ec5-450d-bd9e-c15709ce25ad</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>~</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>caa0b064-a5f8-4fda-99d2-09724416a8f3</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>TRANSN_MUX</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Solder Jumper, 3-pole, open"/>
+      <property name="ki_keywords" value="Solder Jumper SPDT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>218b9e40-742d-431d-a33e-90ff1cd9aa4f</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>OUT_MUX</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Solder Jumper, 3-pole, open"/>
+      <property name="ki_keywords" value="Solder Jumper SPDT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>08cddae4-51cc-4191-818c-9d2af349550b</tstamps>
+    </comp>
+    <comp ref="LS1">
+      <value>SMUTR-1040K-TT</value>
+      <footprint>SMUTR1040KTT</footprint>
+      <datasheet>https://api.puiaudio.com/file/5f36037e-552c-44f5-a859-95b1452f269b.pdf</datasheet>
+      <fields>
+        <field name="Height">4</field>
+        <field name="Manufacturer_Name">PUI Audio</field>
+        <field name="Manufacturer_Part_Number">SMUTR-1040K-TT</field>
+      </fields>
+      <libsource lib="SMUTR-1040K-TT" part="SMUTR-1040K-TT" description="Speakers &amp; Transducers Ultrasonic Transmitter/Receiver Surface Mount 40KHz"/>
+      <property name="Height" value="4"/>
+      <property name="Manufacturer_Name" value="PUI Audio"/>
+      <property name="Manufacturer_Part_Number" value="SMUTR-1040K-TT"/>
+      <property name="Mouser Part Number" value=""/>
+      <property name="Mouser Price/Stock" value=""/>
+      <property name="Arrow Part Number" value=""/>
+      <property name="Arrow Price/Stock" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Speakers &amp; Transducers Ultrasonic Transmitter/Receiver Surface Mount 40KHz"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0138eb43-de7c-4627-8fb6-a8b32e9f3488</tstamps>
+    </comp>
+    <comp ref="R0">
+      <value>0R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1491ff07-6569-453d-96b1-205651547b56</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>0R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4649b61-48a8-4363-a73a-0d18e9f80ab7</tstamps>
+    </comp>
+    <comp ref="Rinp1">
+      <value>200R 1/4W</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b6ce054-2ca5-4213-87c7-29ec24b80ed1</tstamps>
+    </comp>
+    <comp ref="Rpwr1">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7fca22bf-a84d-4da4-9d37-9bbe6b9fd996</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>FLT</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fcb86935-c9ff-4b11-b5fc-d6856a8b0e5d</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TRANSP</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>abc95d3e-4d1e-41b1-8052-9164074d8ca1</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TRANSN</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>489ca9d6-1f65-4d62-94a6-4f160a62ede4</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>VDRV</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d2704d0f-8926-4436-892f-1eac12e57164</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>INP</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eed1da8c-3cd3-48fa-9dfd-eb6730883dd5</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>INN</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8012d01d-2b28-4fb9-94c6-f026bf382170</tstamps>
+    </comp>
+    <comp ref="TP7">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d61c8cb-fed2-42f9-80f8-eb67ed5300ef</tstamps>
+    </comp>
+    <comp ref="TP8">
+      <value>VOUT</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fc1ebe8-d663-47a5-b42b-bfe1571f1b21</tstamps>
+    </comp>
+    <comp ref="TP9">
+      <value>IO2</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e7c8ae0-6bd3-4054-bd2d-ff83713c3475</tstamps>
+    </comp>
+    <comp ref="TP10">
+      <value>IO1</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f867302-c23c-416f-823f-9667a4c3ce98</tstamps>
+    </comp>
+    <comp ref="TP11">
+      <value>SDO</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>536bb070-5f43-4a2f-a8cd-488d816a2c93</tstamps>
+    </comp>
+    <comp ref="TP12">
+      <value>SDI</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25127ffd-497b-4c2a-85ff-fcdfd2d7c58b</tstamps>
+    </comp>
+    <comp ref="TP13">
+      <value>SCLK</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f406ff9-9c2a-4a0e-99d1-622823d28e50</tstamps>
+    </comp>
+    <comp ref="TP14">
+      <value>NCS</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e10946b3-e89b-484b-af5f-fcbf53363125</tstamps>
+    </comp>
+    <comp ref="TP15">
+      <value>OUT4</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7084089-15d9-4f2b-9b1a-d77f76b7bf79</tstamps>
+    </comp>
+    <comp ref="TP16">
+      <value>OUT3</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Ultrasonic_TexasIns_TUSS4470.kicad_sch"/>
+      <property name="ki_description" value="test point"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>93113d5a-1efa-4232-a61d-2d32d726442a</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x11">
+      <description>Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x11</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Open">
+      <description>Solder Jumper, 3-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="SMUTR-1040K-TT" part="SMUTR-1040K-TT">
+      <description>Speakers &amp; Transducers Ultrasonic Transmitter/Receiver Surface Mount 40KHz</description>
+      <docs>https://api.puiaudio.com/file/5f36037e-552c-44f5-a859-95b1452f269b.pdf</docs>
+      <fields>
+        <field name="Reference">LS</field>
+        <field name="Value">SMUTR-1040K-TT</field>
+        <field name="Footprint">SMUTR1040KTT</field>
+        <field name="Datasheet">https://api.puiaudio.com/file/5f36037e-552c-44f5-a859-95b1452f269b.pdf</field>
+        <field name="Height">4</field>
+        <field name="Manufacturer_Name">PUI Audio</field>
+        <field name="Manufacturer_Part_Number">SMUTR-1040K-TT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TUSS4470TRTJT" part="TUSS4470TRTJT">
+      <description>Sensor Interface Direct drive ultrasonic sensor IC with logarithmic amplifier 20-QFN -25 to 105</description>
+      <docs>https://www.ti.com/lit/gpn/TUSS4470</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">TUSS4470TRTJT</field>
+        <field name="Footprint">QFN50P400X400X80-21N-D</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/TUSS4470</field>
+        <field name="Height">0.8</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">TUSS4470TRTJT</field>
+        <field name="Mouser Part Number">595-TUSS4470TRTJT</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSS4470TRTJT?qs=xZ%2FP%252Ba9zWqbLTbKNHEKnrQ%3D%3D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT3" type="passive"/>
+        <pin num="2" name="DGND" type="passive"/>
+        <pin num="3" name="NCS" type="passive"/>
+        <pin num="4" name="SCLK" type="passive"/>
+        <pin num="5" name="SDI" type="passive"/>
+        <pin num="6" name="SDO" type="passive"/>
+        <pin num="7" name="IO1" type="passive"/>
+        <pin num="8" name="IO2" type="passive"/>
+        <pin num="9" name="VOUT" type="passive"/>
+        <pin num="10" name="VDD" type="passive"/>
+        <pin num="11" name="INN" type="passive"/>
+        <pin num="12" name="INP" type="passive"/>
+        <pin num="13" name="SGND" type="passive"/>
+        <pin num="14" name="GND" type="passive"/>
+        <pin num="15" name="OUTA" type="passive"/>
+        <pin num="16" name="OUTB" type="passive"/>
+        <pin num="17" name="VDRV" type="passive"/>
+        <pin num="18" name="FLT" type="passive"/>
+        <pin num="19" name="OUT4" type="passive"/>
+        <pin num="20" name="VPWR" type="passive"/>
+        <pin num="21" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/usr/share/kicad/symbols//Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/usr/share/kicad/symbols//Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="SMUTR-1040K-TT">
+      <uri>/home/roman/devel/DSP/kicad/Ultrasonic_TexasIns_TUSS4470/SMUTR-1040K-TT/SMUTR-1040K-TT.kicad_sym</uri>
+    </library>
+    <library logical="TUSS4470TRTJT">
+      <uri>/home/roman/devel/DSP/kicad/Ultrasonic_TexasIns_TUSS4470/TUSS4470TRTJT/TUSS4470TRTJT.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+3.3V">
+      <node ref="Cvdd1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="10" pinfunction="VDD" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="2" name="/+20V">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="Rpwr1" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="Cflt1" pin="2" pintype="passive"/>
+      <node ref="Cinn1" pin="2" pintype="passive"/>
+      <node ref="Cvdd1" pin="2" pintype="passive"/>
+      <node ref="IC1" pin="13" pinfunction="SGND" pintype="passive"/>
+      <node ref="R0" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="GNDD">
+      <node ref="Cpwr1" pin="2" pintype="passive"/>
+      <node ref="Cpwr2" pin="2" pintype="passive"/>
+      <node ref="IC1" pin="14" pinfunction="GND" pintype="passive"/>
+      <node ref="IC1" pin="21" pinfunction="EP" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R0" pin="2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="5" name="IO1">
+      <node ref="IC1" pin="7" pinfunction="IO1" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="6" name="IO2">
+      <node ref="IC1" pin="8" pinfunction="IO2" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="7" name="NCS">
+      <node ref="IC1" pin="3" pinfunction="NCS" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="TP14" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(Cinp1-Pad2)">
+      <node ref="Cinp1" pin="2" pintype="passive"/>
+      <node ref="Rinp1" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(D1-A)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(IC1-DGND)">
+      <node ref="IC1" pin="2" pinfunction="DGND" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(IC1-FLT)">
+      <node ref="Cflt1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="18" pinfunction="FLT" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(IC1-INN)">
+      <node ref="Cinn1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="11" pinfunction="INN" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(IC1-INP)">
+      <node ref="Cinp1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="12" pinfunction="INP" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(IC1-VDRV)">
+      <node ref="Cpwr2" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="17" pinfunction="VDRV" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(IC1-VPWR)">
+      <node ref="Cpwr1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="20" pinfunction="VPWR" pintype="passive"/>
+      <node ref="Rpwr1" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="OUT3">
+      <node ref="IC1" pin="1" pinfunction="OUT3" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="TP16" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="17" name="OUT4">
+      <node ref="IC1" pin="19" pinfunction="OUT4" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="TP15" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="18" name="OUTA">
+      <node ref="H2" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="IC1" pin="15" pinfunction="OUTA" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="LS1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="Rinp1" pin="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="19" name="OUTB">
+      <node ref="IC1" pin="16" pinfunction="OUTB" pintype="passive"/>
+      <node ref="JP2" pin="2" pinfunction="C" pintype="passive"/>
+    </net>
+    <net code="20" name="SCLK">
+      <node ref="IC1" pin="4" pinfunction="SCLK" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="TP13" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="21" name="SDI">
+      <node ref="IC1" pin="5" pinfunction="SDI" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="TP12" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="22" name="SDO">
+      <node ref="IC1" pin="6" pinfunction="SDO" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="23" name="TRANSN">
+      <node ref="H1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="JP1" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="LS1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="24" name="TRANSN_MUX">
+      <node ref="JP1" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="JP2" pin="3" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="25" name="VOUT">
+      <node ref="IC1" pin="9" pinfunction="VOUT" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

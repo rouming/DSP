@@ -1,0 +1,49 @@
+"Source:","/home/roman/devel/DSP/kicad/Ultrasonic_TexasIns_TUSS4470/Ultrasonic_TexasIns_TUSS4470.kicad_sch"
+"Date:","Sat 27 Jan 2024 18:46:07"
+"Tool:","Eeschema 7.0.9-7.0.9~ubuntu22.04.1"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","35"
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","DNP","Height","Manufacturer_Name","Manufacturer_Part_Number","Mouser Part Number","Mouser Price/Stock"
+
+"1","1","Cflt1","15nF, 5V","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","","","",""
+"2","2","Cinn1, Cvdd1","100nF, >5V","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","","","",""
+"3","1","Cinp1","330pF, 50V","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","","","",""
+
+"4","1","Cpwr1","100nF, 50V","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","","","",""
+"5","1","Cpwr2","2.2uF, 50V","Device:C","Capacitor_SMD:C_0805_2012Metric","~","","","","","",""
+
+"6","1","D1","MSS1P3","Device:D_Schottky","Diode_SMD:D_MicroSMP_AK","~","","","","","",""
+"7","2","H1, H2","MountingHole_Pad","Mechanical:MountingHole_Pad","MountingHole:MountingHole_2.2mm_M2_DIN965_Pad","~","","","","","",""
+"8","1","IC1","TUSS4470TRTJT","TUSS4470TRTJT:TUSS4470TRTJT","QFN50P400X400X80-21N-D","https://www.ti.com/lit/gpn/TUSS4470","","0.8","Texas Instruments","TUSS4470TRTJT","595-TUSS4470TRTJT","https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSS4470TRTJT?qs=xZ%2FP%252Ba9zWqbLTbKNHEKnrQ%3D%3D"
+"9","1","J1","~","Connector_Generic:Conn_01x11","Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical","~","","","","","",""
+"10","1","J2","~","Connector_Generic:Conn_01x03","Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical","~","","","","","",""
+"11","1","JP1","TRANSN_MUX","Jumper:SolderJumper_3_Open","Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm","~","","","","","",""
+"12","1","JP2","OUT_MUX","Jumper:SolderJumper_3_Open","Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm","~","","","","","",""
+"13","1","LS1","SMUTR-1040K-TT","SMUTR-1040K-TT:SMUTR-1040K-TT","SMUTR1040KTT","https://api.puiaudio.com/file/5f36037e-552c-44f5-a859-95b1452f269b.pdf","","4","PUI Audio","SMUTR-1040K-TT","",""
+
+"14","2","R0, R1","0R","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","","","",""
+
+
+"15","1","Rinp1","200R 1/4W","Device:R","Resistor_SMD:R_0805_2012Metric","~","","","","","",""
+"16","1","Rpwr1","10R","Device:R","Resistor_SMD:R_0603_1608Metric","~","","","","","",""
+
+
+"17","1","TP1","FLT","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"18","1","TP2","TRANSP","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"19","1","TP3","TRANSN","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"20","1","TP4","VDRV","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"21","1","TP5","INP","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"22","1","TP6","INN","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"23","1","TP7","GND","Connector:TestPoint","TestPoint:TestPoint_Pad_D2.0mm","~","","","","","",""
+"24","1","TP8","VOUT","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"25","1","TP9","IO2","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"26","1","TP10","IO1","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"27","1","TP11","SDO","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"28","1","TP12","SDI","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"29","1","TP13","SCLK","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"30","1","TP14","NCS","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"31","1","TP15","OUT4","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""
+"32","1","TP16","OUT3","Connector:TestPoint","TestPoint:TestPoint_Pad_D1.0mm","~","","","","","",""

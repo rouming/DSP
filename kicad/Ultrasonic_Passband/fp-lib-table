@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SPU0410LR5H_QB")(type "KiCad")(uri "${KIPRJMOD}/SPU0410LR5H_QB")(options "")(descr ""))
+)

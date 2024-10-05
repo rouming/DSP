@@ -1,0 +1,89 @@
+{
+	"Name": "Ultrasonic-40k",
+	"Description": "Gain=40dB, Passband=15kHz, Stopband=-40dB, 50kHz, Fc=40k, order=8\n",
+	"Tool": "FW",
+	"Version": "1.2",
+	"Design": {
+		"visitedTabs": [
+			"filter-type",
+			"specifications",
+			"components",
+			"tolerances"
+		],
+		"filterType": "bandPass",
+		"specifications": {
+			"gain": 40,
+			"gainUnit": "dB",
+			"passbandAttenuation": -3,
+			"passbandFrequency": 15000,
+			"stopbandAttenuation": -40,
+			"stopbandFrequency": 50000,
+			"filterResponseValue": 0.06,
+			"filterResponseSlider": "39",
+			"centerFrequency": 40000
+		},
+		"components": {
+			"vsPlus": 3.3,
+			"vsMinus": 0,
+			"optimization": "VoltageRange",
+			"optimizationPreference": "nonSpecific",
+			"compensateForGbw": false,
+			"preferredAlgorithms": {
+				"sallenKey|lowPass": "lowpassV2"
+			},
+			"stages": [
+				{
+					"stageLetter": "A",
+					"componentSizing": 61,
+					"gain": -1,
+					"gainEnabled": false,
+					"implementation": "deliyannisFriend",
+					"opAmps": "LTC6262"
+				},
+				{
+					"stageLetter": "B",
+					"componentSizing": 63,
+					"gain": -1,
+					"gainEnabled": false,
+					"implementation": "deliyannisFriend",
+					"opAmps": "LTC6262"
+				},
+				{
+					"stageLetter": "C",
+					"componentSizing": 60,
+					"gain": 212,
+					"gainEnabled": true,
+					"implementation": "deliyannisFriend",
+					"opAmps": "LTC6262"
+				},
+				{
+					"stageLetter": "D",
+					"componentSizing": 64,
+					"gain": 219,
+					"gainEnabled": true,
+					"implementation": "deliyannisFriend",
+					"opAmps": "LTC6262"
+				}
+			],
+			"recommendedAmps": [],
+			"sortOrder": [
+				0,
+				2,
+				1,
+				3
+			]
+		},
+		"tolerances": {
+			"resistorTolerance": "1%",
+			"capacitorTolerance": "5%",
+			"inductorTolerance": "5%",
+			"opAmpGbwTolerance": "20%",
+			"resistorPreferredSeries": "E96",
+			"capacitorPreferredSeries": "E24",
+			"inductorPreferredSeries": "E12"
+		},
+		"nextSteps": {}
+	},
+	"CreatedDate": "2023-12-09 11:06:47 PM",
+	"UpdatedDate": "2023-12-09 11:06:47 PM"
+}
