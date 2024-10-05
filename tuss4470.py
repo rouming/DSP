@@ -15,12 +15,20 @@
 # https://www.ti.com/lit/ug/slau822a/slau822a.pdf?ts=1705051190678
 # https://github.com/MikroElektronika/mikrosdk_click_v2/blob/1b1b00b1b58f46c109b7c0386c0396a7daccf125/clicks/ultrasonic5/lib_ultrasonic5/src/ultrasonic5.c
 #
+#
+# This code uses custom (not FT232H) command like SET_CLK_PIN and will work
+# only on a FT232H clone based on the STM32 bluepill board:
+# https://github.com/rouming/FT232H-bluepill/
+#
 
-import time, sys
+import time, sys, math
 import pylibftdi as ftdi
 
-BITMODE_MPSSE = 0x02
+# Modes
+BITMODE_RESET  = 0x00
+BITMODE_MPSSE  = 0x02
 
+# Shifting commands IN MPSSE Mode
 MPSSE_WRITE_NEG = 0x01   # Write TDI/DO on negative TCK/SK edge
 MPSSE_BITMODE   = 0x02   # Write bits, not bytes
 MPSSE_READ_NEG  = 0x04   # Sample TDO/DI on negative TCK/SK edge
@@ -28,7 +36,6 @@ MPSSE_LSB       = 0x08   # LSB first
 MPSSE_DO_WRITE  = 0x10   # Write TDI/DO
 MPSSE_DO_READ   = 0x20   # Read TDO/DI
 MPSSE_WRITE_TMS = 0x40   # Write TMS/CS
-
 DIS_3_PHASE     = 0x8d
 DIS_ADAPTIVE    = 0x97
 
@@ -55,6 +62,9 @@ DIS_ADAPTIVE    = 0x97
 CLK_BYTES_OR_HIGH = 0x9c
 CLK_BYTES_OR_LOW  = 0x9d
 
+# Custom commands
+SET_CLK_PIN       = 0xb0
+
 # Pins
 # ADBUS
 SK_PIN  = 1<<0
@@ -62,8 +72,9 @@ DO_PIN  = 1<<1
 DI_PIN  = 1<<2
 CS_PIN  = 1<<3
 IO1_PIN = 1<<4
+IO2_PIN = 1<<5
 
-OUT_PINS = SK_PIN|DO_PIN|CS_PIN|IO1_PIN
+OUT_PINS = SK_PIN|DO_PIN|CS_PIN|IO1_PIN|IO2_PIN
 
 #
 # TUSS registers
@@ -178,26 +189,28 @@ TUSS_DEVICE_ID                       = 0xB9
 # Specified device read bit
 TUSS_SPI_READ_BIT                    = 0x80
 
+def ilog2(n):
+    return 0 if n < 1 else int(math.log(n, 2))
 
-def ft_set_clock(d, hz):
+def ftdi_set_clock(d, hz):
     div = int((12000000 / (hz * 2)) - 1)
-    ft_write(d, (TCK_DIVISOR, div%256, div//256))
+    ftdi_write(d, (TCK_DIVISOR, div%256, div//256))
 
-def ft_read(d, nbytes):
+def ftdi_read(d, nbytes):
     s = d.read(nbytes)
     return list(s)
 
-def ft_write(d, data):
+def ftdi_write(d, data):
     s = bytes(data)
     r = d.write(s)
     return r
 
-def ft_make_hdr(cmd, n):
+def ftdi_make_hdr(cmd, n):
     n = n - 1
     return (cmd, n%256, n//256)
 
-def ft_make_mpsse_pkg(cmd, data):
-    hdr = ft_make_hdr(cmd, len(data))
+def ftdi_make_mpsse_pkg(cmd, data):
+    hdr = ftdi_make_hdr(cmd, len(data))
     return hdr + tuple(data)
 
 def tuss_calc_parity_bit(data_arr):
@@ -212,17 +225,17 @@ def tuss_calc_parity_bit(data_arr):
 def tuss_spi_write_read(b1, b2):
     b1 |= tuss_calc_parity_bit([b1, b2])
 
-    ret = ft_write(d,
-             # CS low, IO1 high
-             (SET_BITS_LOW, IO1_PIN, OUT_PINS) +
-             # SPI write-read; out on +ve edge, in on -ve edge
-             ft_make_mpsse_pkg(MPSSE_DO_READ | MPSSE_DO_WRITE | MPSSE_WRITE_NEG, [b1, b2]) +
-             # CS|IO1 high, other low
-             (SET_BITS_LOW, CS_PIN|IO1_PIN, OUT_PINS))
+    ret = ftdi_write(d,
+             # CS low, IO1|IO2 high
+             (SET_BITS_LOW, IO1_PIN|IO2_PIN, OUT_PINS) +
+             # SPI write-read, mode 1
+             ftdi_make_mpsse_pkg(MPSSE_DO_READ | MPSSE_DO_WRITE, [b1, b2]) +
+             # CS|IO1|IO2 high, other low
+             (SET_BITS_LOW, CS_PIN|IO1_PIN|IO2_PIN, OUT_PINS))
     if ret != 11:
         return (-1, 0x00)
 
-    rd = ft_read(d, 2)
+    rd = ftdi_read(d, 2)
     if len(rd) != 2:
         return (-1, 0x00)
     if rd[0] & 0x80:
@@ -251,7 +264,7 @@ def tuss_write_register(reg, data_in):
 
 def tuss_default_setup():
     # Set SPI clock frequency
-    ft_set_clock(d, 1e6)
+    ftdi_set_clock(d, 1e6)
 
     rd = tuss_read_register(TUSS_REG_DEVICE_ID)
     if rd[1] != TUSS_DEVICE_ID:
@@ -279,26 +292,29 @@ def tuss_default_setup():
 
 def tuss_burst():
     # Set clock for the burst frequency
-    ft_set_clock(d, TUSS_BURST_FREQ)
+    ftdi_set_clock(d, TUSS_BURST_FREQ)
 
-    ret = ft_write(d,
-             # SK high (see recommendation about the IO2 from TI), IO1 low
-             (SET_BITS_LOW, SK_PIN|CS_PIN, OUT_PINS) +
+    ret = ftdi_write(d,
+             # Custom command: set IO2 as new clock pin
+             (SET_CLK_PIN, ilog2(IO2_PIN)) +
+             # IO2 high (see recommendation about the IO2 from TI), IO1 low
+             (SET_BITS_LOW, IO2_PIN|CS_PIN, OUT_PINS) +
              # Number of burst pulses in bytes
-             ft_make_hdr(CLK_BYTES, TUSS_BURST_PULSE_BURST_PULSE_16//8) +
-             # SK|CS|IO1 high, other low
-             (SET_BITS_LOW, SK_PIN|CS_PIN|IO1_PIN, OUT_PINS))
-    if ret != 9:
+             ftdi_make_hdr(CLK_BYTES, TUSS_BURST_PULSE_BURST_PULSE_16//8) +
+             # CS|IO1|IO2 high, other low
+             (SET_BITS_LOW, CS_PIN|IO1_PIN|IO2_PIN, OUT_PINS) +
+             # Custom command: restore SK as clock pin
+             (SET_CLK_PIN, ilog2(SK_PIN)))
+    if ret != 13:
         return -1
 
     return 0
 
 d = ftdi.Device()
-d.ftdi_fn.ftdi_set_bitmode(0, 0); # reset
 d.ftdi_fn.ftdi_set_bitmode(0, BITMODE_MPSSE)
 
 # CS|IO1 high, other low
-ft_write(d, (SET_BITS_LOW, CS_PIN|IO1_PIN, OUT_PINS))
+ftdi_write(d, (SET_BITS_LOW, CS_PIN|IO1_PIN, OUT_PINS))
 
 ret = tuss_default_setup()
 print("TUSS setup: %d" % ret)
